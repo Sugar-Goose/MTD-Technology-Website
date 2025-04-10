@@ -1,4 +1,6 @@
-# mtd-technology
+# MTD Technology | Vue.js Landing
+
+# [Link to Figma Layout](https://www.figma.com/design/r7BP0FWBllprCCMtO4fOfT/MTD-Technology?node-id=0-1&t=0eNjxZ2f3Sg5rrqS-1)
 
 ## Project setup
 ```
