@@ -1,6 +1,6 @@
 <template>
   <div class="main__container">
-    <video id="background-video" autoplay muted loop>
+    <video id="background-video" autoplay muted loop playsinline>
         <source src="../assets/bg_video.mp4" type="video/mp4">
         Your browser is not supporting video
     </video>
