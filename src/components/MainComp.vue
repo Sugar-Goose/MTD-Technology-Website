@@ -106,15 +106,17 @@ export default {
 .content {
   display: flex;
   flex-direction: column;
+  width: fit-content;
   gap: 20px;
   position: absolute;
   top:50%;
   left:50%;
-  width: fit-content;
+  width: 50%;
   transform: translate(-50%, -50%);
 }
 
 .header__text {
+  width: fit-content;
   border-radius: 28px;
   background: linear-gradient(100deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100.33%);
   backdrop-filter: blur(25px);
