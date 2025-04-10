@@ -1,0 +1,138 @@
+@import url('./fonts.css');
+
+:root {
+    --main-color: #FFF; /* Main */
+    --plain-color: #CACACA; /* Plain */
+    --accent-color: #FCD116; /* Accent */
+    --second-color: #CE1126; /* Second */
+}
+
+h1 {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 76.8px */
+    text-transform: capitalize;
+}
+
+h2 {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 67.2px */
+    text-transform: capitalize;
+}
+
+h3 {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 57.6px */
+    text-transform: capitalize;
+}
+
+h4 {
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+h5 {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 38.4px */
+    text-transform: capitalize;
+}
+
+.big__plain__text {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "sf_monoregular";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 38.4px */
+    text-transform: capitalize;
+}
+
+h6 {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "San Francisco";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 33.6px */
+    text-transform: capitalize;
+}
+
+p {
+    color: var(--plain-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "San Francisco";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+    text-transform: capitalize;
+}
+
+.accent_button {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "San Francisco";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+    text-transform: capitalize;
+}
+
+.button {
+    color: var(--main-color);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "San Francisco";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 16.8px */
+    text-transform: capitalize;
+}
+
+a {
+    color: #FFF;
+    font-family: "sf_monoregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration: none;
+    padding: 0;
+  }
