@@ -99,8 +99,11 @@ export default {
 
 .main__container {
   padding-top: 20px;
+  padding-bottom: 0px;
   width: 100vw;
   height: 100vh;
+  background-color: var(--background);
+  margin: 0px;
 }
 
 .content {
@@ -181,7 +184,6 @@ export default {
   cursor: default;
   display: flex;
   padding: 0px 20px;
-  
   align-items: center;
   gap: 10px;
   border-radius: 17px;
@@ -222,7 +224,6 @@ export default {
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: -1;
 }
 
 .nav__buttons {
@@ -322,7 +323,7 @@ export default {
 
 /* Media requests */
 
-@media (max-width: 1366px) and (min-width: 1100px) {
+@media (max-width: 1366px) {
   .header {
     height: 56px;
     padding: 0 12px;
@@ -339,7 +340,7 @@ export default {
   }
 
   .nav__pill a {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .pill__container {
@@ -355,6 +356,34 @@ export default {
   .button__container {
     font-size: 15px;
     padding: 8px 14px; 
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    display: none;
+  }
+
+  .header__text h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .header {
+    display: none;
+  }
+
+  .header__text h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
 }
 

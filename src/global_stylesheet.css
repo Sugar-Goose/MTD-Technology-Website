@@ -5,6 +5,7 @@
     --plain-color: #CACACA; /* Plain */
     --accent-color: #FCD116; /* Accent */
     --second-color: #CE1126; /* Second */
+    --background: #000;
 }
 
 h1 {
@@ -12,11 +13,12 @@ h1 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 64px;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 76.8px */
     text-transform: capitalize;
+    margin: 0;
 }
 
 h2 {
@@ -24,10 +26,12 @@ h2 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 56px;
+    font-size: 3.5rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 67.2px */
+    line-height: auto; /* 67.2px */
+    padding: 0;
+    margin: 0;
     text-transform: capitalize;
 }
 
@@ -36,18 +40,19 @@ h3 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 48px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 57.6px */
     text-transform: capitalize;
+    margin: 0;
 }
 
 h4 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 36px;
+    font-size: 2.25rem;
     font-style: normal;
     font-weight: 500;
     margin: 0;
@@ -59,11 +64,13 @@ h5 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 32px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 38.4px */
+    line-height: auto; /* 38.4px */
     text-transform: capitalize;
+    padding: 0;
+    margin: 0;
 }
 
 .big__plain__text {
@@ -71,35 +78,37 @@ h5 {
     leading-trim: both;
     text-edge: cap;
     font-family: "sf_monoregular";
-    font-size: 32px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 38.4px */
     text-transform: capitalize;
+    margin: 0;
 }
 
 h6 {
     color: var(--main-color);
     leading-trim: both;
     text-edge: cap;
-    font-family: "San Francisco";
-    font-size: 28px;
+    font-family: "sf_monoregular";
+    font-size: 1.75rem;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 33.6px */
     text-transform: capitalize;
+    margin: 0;
 }
 
 p {
-    color: var(--plain-color);
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "San Francisco";
-    font-size: 24px;
+    color: var(--main-color);
+    font-family: "sf_monobold";
+    font-size: 1.37rem;
     font-style: normal;
-    font-weight: 500;
-    line-height: 120%; /* 28.8px */
+    font-weight: 700;
+    line-height: normal;
     text-transform: capitalize;
+    margin: 0;
+    padding: 0;
 }
 
 .accent_button {
@@ -135,4 +144,34 @@ a {
     line-height: 100%;
     text-decoration: none;
     padding: 0;
+}
+
+.accent__button {
+    display: flex;
+    padding: 17px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    backdrop-filter: blur(25px);
+    width: fit-content;
+    font-size: 26px;
+    font-family: "sf_monomedium";
+}
+
+.accent__button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(280deg, rgba(255, 255, 255, 0.50) 0%, rgba(252, 209, 22, 0.10) 100%);
+    opacity: 0;
+    border-radius: 26px;
+    transition: opacity 0.25s;
+    z-index: -1;
+  }
+  
+  .accent__button:hover::after {
+    opacity: 1;
   }
