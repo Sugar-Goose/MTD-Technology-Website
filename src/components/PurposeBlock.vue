@@ -57,7 +57,7 @@ export default {
 
 .text__container p {
     font-size: 0.85rem;
-    font-family: "sf_monoregular";
+    font-family: "sf_monolight";
 }
 
 .content {
