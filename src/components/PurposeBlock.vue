@@ -35,7 +35,7 @@ export default {
 
 .header__container {
     display: flex;
-    padding: 50px;
+    margin-bottom: 50px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -46,7 +46,6 @@ export default {
 .text__container {
     width: 50%;
     display: flex;
-    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -84,8 +83,8 @@ export default {
 }
 
 .black__block {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     background-color: var(--background);
     position: absolute;
     bottom:0;
@@ -97,9 +96,10 @@ export default {
 .main__container {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     align-content: space-around;
+    padding: 3.125rem;
     gap: 50px;
     width: 100vw;
     height: 100vh;

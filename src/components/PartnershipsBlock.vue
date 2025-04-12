@@ -176,17 +176,21 @@ export default {
 
 .background__sphere {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 100vw;
-    height: 100vh;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
     z-index: 0;
 }
 
 .background__sphere img {
-    width: 45%;
+    width: 75%;
 }
 
 .image__container {
@@ -204,12 +208,12 @@ export default {
 }
 
 .partnership {
-    width: 30%;
+    max-width: 30%;
 }
 
 .partnerships__container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1;
 }
 
@@ -226,14 +230,16 @@ p {
 }
 
 .main__container {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-content: space-around;
     gap: 50px;
-    padding-top: 3.125rem;
+    padding: 3.125rem;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
     background-color: var(--background);
     color: #FFF;
 }

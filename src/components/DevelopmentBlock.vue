@@ -22,6 +22,8 @@
       <div class="button__container">
         <a href="#" class="accent__button">Start a Project ></a>
       </div>
+
+      <div class="bottom__fade"></div>
     </div>
   </template>
   
@@ -246,7 +248,17 @@
   );
 }
 
+.bottom__fade {
+    width: 100%;
+    height: 5%;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
 .main__container {
+    position: relative;
   display: flex;
   width: 100vw;
   height: 100vh;
