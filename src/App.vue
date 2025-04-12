@@ -4,6 +4,7 @@
   <PartnershipsBlock/>
   <PositionsBlock/>
   <PurposeBlock/>
+  <DevelopmentBlock/>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import ServicesBlock from './components/ServicesBlock.vue'
 import PartnershipsBlock from './components/PartnershipsBlock.vue'
 import PositionsBlock from './components/PositionsBlock.vue'
 import PurposeBlock from './components/PurposeBlock.vue'
+import DevelopmentBlock from './components/DevelopmentBlock.vue'
 
 export default {
   name: 'App',
@@ -20,7 +22,8 @@ export default {
     ServicesBlock,
     PartnershipsBlock,
     PositionsBlock,
-    PurposeBlock
+    PurposeBlock,
+    DevelopmentBlock
   }
 }
 </script>
