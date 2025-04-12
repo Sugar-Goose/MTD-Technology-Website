@@ -6,18 +6,12 @@
       </div>
   
       <div class="skills__carousel">
-        <div
-          class="skills__row"
-          v-for="(row, index) in rows"
-          :key="index"
-          :class="{ 'reverse': index % 2 === 1 }"
-        >
+        <div class="skills__row" v-for="(row, index) in rows" :key="index" :class="{ 'reverse': index % 2 === 1 }">
           <div class="skills__row-inner">
-            <!-- Основной набор иконок -->
             <div class="skill" v-for="(skill, skillIndex) in row.skills" :key="skillIndex">
               <svg width="95" height="96" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg" v-html="skill.svg"></svg>
             </div>
-            <!-- Дублируем иконки для бесшовной анимации -->
+            
             <div class="skill" v-for="(skill, skillIndex) in row.skills" :key="'dup-' + skillIndex">
               <svg width="95" height="96" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg" v-html="skill.svg"></svg>
             </div>
@@ -26,7 +20,7 @@
       </div>
   
       <div class="button__container">
-        <a class="accent__button">Start a Project ></a>
+        <a href="#" class="accent__button">Start a Project ></a>
       </div>
     </div>
   </template>
@@ -56,7 +50,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                        </svg>`, // Иконка 1 для ряда 1: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                        </svg>`,
               },
               {
                 id: 2,
@@ -75,7 +69,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                        </svg>`, // Иконка 2 для ряда 1: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                        </svg>`,
               },
               {
                 id: 3,
@@ -94,7 +88,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                        </svg>`, // Иконка 3 для ряда 1: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                        </svg>`,
               },
             ]),
           },
@@ -117,7 +111,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 1 для ряда 2: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`,
               },
               {
                 id: 5,
@@ -138,7 +132,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 2 для ряда 2: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`, 
               },
               {
                 id: 6,
@@ -157,7 +151,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 3 для ряда 2: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`,
               },
             ]),
           },
@@ -180,7 +174,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 1 для ряда 3: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`,
               },
               {
                 id: 8,
@@ -199,7 +193,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 2 для ряда 3: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`,
               },
               {
                 id: 9,
@@ -218,7 +212,7 @@
                         <stop offset="1" stop-color="white" stop-opacity="0.5"/>
                         </linearGradient>
                         </defs>
-                    </svg>`, // Иконка 3 для ряда 3: Вставьте ваш SVG-код здесь (например, <path d="...">...</path>)
+                    </svg>`, 
               },
             ]),
           },
@@ -227,9 +221,9 @@
     },
     methods: {
       generateSkills(baseSkills) {
-        const containerWidth = window.innerWidth; // Ширина контейнера
-        const skillWidth = 95 + 20; // Ширина иконки + gap
-        const minSkills = Math.ceil(containerWidth / skillWidth) + 3; // Запас для анимации
+        const containerWidth = window.innerWidth;
+        const skillWidth = 95 + 20; 
+        const minSkills = Math.ceil(containerWidth / skillWidth) + 3;
         let result = [];
         for (let i = 0; i < minSkills; i++) {
           result.push(baseSkills[i % baseSkills.length]);
@@ -294,7 +288,6 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  /* Маска для плавного растворения иконок по краям */
   mask-image: linear-gradient(
     to right,
     transparent 0%,
