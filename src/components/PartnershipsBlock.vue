@@ -305,4 +305,32 @@ p {
         padding: 20px;
     }
 }
+
+@media screen and (max-width: 950px) {
+    .partnerships__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .partnership {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .second__header h4, .partnership__info p {
+        text-align: center;
+    }
+
+    .main__container {
+        height: fit-content;
+    }
+}
 </style>

@@ -83,11 +83,11 @@ export default {
 }
 
 .black__block {
-    width: 350px;
-    height: 250px;
+    width: 30%;
+    height: 100px;
     background-color: var(--background);
     position: absolute;
-    bottom:0;
+    bottom:10%;
     right:0;
     pointer-events: none;
     z-index: 1;
@@ -107,4 +107,46 @@ export default {
     color: #FFF;
 }
 
+@media screen and (max-width: 1100px) {
+    .black__block {
+        display: none;
+    }
+
+    .model__3D {
+        display: none;
+    }
+
+    .header__container {
+        width: 100%;
+    }
+
+    .header__container h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text__container {
+        width: 70%;
+    }
+
+    .text__container p {
+        text-align: center;
+    }
+
+    .main__container {
+        padding: 0px;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__container h2 {
+        font-size: 3rem;
+    }
+}
 </style>

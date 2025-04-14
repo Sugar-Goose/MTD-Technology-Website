@@ -144,6 +144,7 @@ export default {
 <style scoped>
 @import url('../global_stylesheet.css');
 .object__3d {
+    display: none;
     position: absolute;
     bottom: 0;
     z-index: 10;
@@ -192,6 +193,7 @@ export default {
     position: relative;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-content: center;
     align-items: center;
     gap: 50px;
@@ -227,6 +229,40 @@ export default {
 
     p {
         font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main__container {
+        justify-content: center;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header img {
+        width: 70%;
+    }
+
+    .text__container {
+        justify-content: center;
+    }
+
+    .position {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .image__container svg {
+        width: 32px;
+    }
+
+    .position__text h4 {
+        font-size: 1.25rem;
     }
 }
 

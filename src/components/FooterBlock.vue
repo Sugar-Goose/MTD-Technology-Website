@@ -202,4 +202,50 @@ a.pill__text:hover {
     }
 }
 
+@media screen and (max-width: 1100px) {
+    .main__container {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .logo svg {
+        width: 100%;
+    }
+
+    .accent__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .pills__container {
+        gap: 10px;
+    }
+
+    .column {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pill {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pill__text {
+        text-align: center;
+    }
+
+    .accent__text {
+        text-align: center;
+    }
+}
 </style>

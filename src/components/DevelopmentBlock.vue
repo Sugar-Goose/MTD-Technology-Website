@@ -348,4 +348,22 @@
     transform: translateX(0);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .text__content {
+    width: 80%;
+  }
+
+  .text__content h5 {
+    font-size: 1.5rem;
+  }
+
+  .text__content p {
+    opacity: 0.7;
+  }
+
+  .skills__carousel {
+    width: 100%;
+  }
+}
 </style>

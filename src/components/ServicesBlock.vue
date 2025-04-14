@@ -266,4 +266,67 @@ export default {
         flex-wrap: wrap;
     }
 }
+
+@media screen and (max-width: 892px) {
+    .header__card h3 {
+        font-size: 2.25rem;
+    }
+
+    .header__text h6 {
+        font-size: 1.75rem;
+    }
+
+    .content__text h4 {
+        font-size: 2rem;
+    }
+
+    .content__text h5 {
+        font-size: 1.5rem;
+    }
+
+    .skill p {
+        font-size: 1rem;
+    }
+
+    .skill {
+        padding: 16px 10px;
+    }
+
+    .main__container {
+        gap: 20px;
+        padding: 0px;
+    }
+}
+
+
+@media screen and (max-width: 592px) {
+    .header__card h3 {
+        font-size: 1.75rem;
+    }
+
+    .header__text h6 {
+        font-size: 1.5rem;
+    }
+
+    .content__text h4 {
+        font-size: 1.75rem;
+    }
+
+    .content__text h5 {
+        font-size: 1.25rem;
+    }
+
+    .skill p {
+        font-size: 0.75rem;
+    }
+
+    .skill {
+        padding: 16px 10px;
+    }
+
+    .main__container {
+        gap: 20px;
+        padding: 0px;
+    }
+}
 </style>

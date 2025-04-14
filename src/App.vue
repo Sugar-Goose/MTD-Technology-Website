@@ -37,4 +37,8 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #000;
+}
 </style>

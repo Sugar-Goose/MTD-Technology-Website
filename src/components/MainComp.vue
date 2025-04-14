@@ -1,5 +1,34 @@
 <template>
   <div class="main__container">
+    <div class="mobile__header">
+      <div class="mobile__logo">
+        <svg width="120" height="22" viewBox="0 0 120 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="Logo">
+          <g id="Logo_2">
+          <g id="Logo_3">
+          <path d="M6.94522 2H12.9396L15.3997 12.0385H15.6076L21.3941 2H27.3885L24.4433 19.7231H19.7309L21.4288 9.47692H21.2902L15.6769 19.5846H12.8357L10.5834 9.40769H10.4448L8.71235 19.7231H4L6.94522 2Z" fill="url(#paint0_linear_10_12)"/>
+          <path d="M26.5761 5.87692L27.2345 2H42.6536L41.9952 5.87692H36.6592L34.3723 19.7231H29.6253L31.9122 5.87692H26.5761Z" fill="url(#paint1_linear_10_12)"/>
+          <path d="M46.4994 19.7231H39.5695L42.5147 2H49.1674C50.9923 2 52.5169 2.36635 53.7412 3.09904C54.9655 3.83173 55.8346 4.87885 56.3486 6.24038C56.8625 7.60192 56.9636 9.22308 56.6518 11.1038C56.3515 12.9154 55.7422 14.4644 54.824 15.751C53.9115 17.0375 52.745 18.0212 51.3244 18.7019C49.9095 19.3827 48.3012 19.7231 46.4994 19.7231ZM45.0615 15.6385H46.8113C47.689 15.6385 48.4715 15.4856 49.1588 15.1798C49.8518 14.8683 50.4293 14.349 50.8913 13.6221C51.359 12.8894 51.6969 11.8885 51.9048 10.6192C52.1011 9.41923 52.0953 8.49327 51.8874 7.84135C51.6795 7.18365 51.2839 6.72788 50.7007 6.47404C50.1174 6.21442 49.3638 6.08462 48.4398 6.08462H46.6553L45.0615 15.6385Z" fill="url(#paint2_linear_10_12)"/>
+          </g>
+          </g>
+          </g>
+          <defs>
+          <linearGradient id="paint0_linear_10_12" x1="79" y1="11" x2="-3" y2="2" gradientUnits="userSpaceOnUse">
+          <stop offset="1" stop-color="white"/>
+          </linearGradient>
+          <linearGradient id="paint1_linear_10_12" x1="79" y1="11" x2="-3" y2="2" gradientUnits="userSpaceOnUse">
+          <stop offset="1" stop-color="white"/>
+          </linearGradient>
+          <linearGradient id="paint2_linear_10_12" x1="79" y1="11" x2="-3" y2="2" gradientUnits="userSpaceOnUse">
+          <stop offset="1" stop-color="white"/>
+          </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="burger__button">
+        <BurgerMenu/>
+      </div>
+    </div>
     <video id="background-video" autoplay muted loop playsinline>
         <source src="../assets/bg_video.mp4" type="video/mp4">
         Your browser is not supporting video
@@ -27,7 +56,7 @@
           <stop offset="1" stop-color="white"/>
           </linearGradient>
           </defs>
-          </svg>
+        </svg>
       </div>
       <div class="nav__buttons">
         <div class="nav__pill"><a href="#h">Home</a></div>
@@ -89,13 +118,29 @@
 </template>
 
 <script>
+import BurgerMenu from './BurgerMenu.vue';
 export default {
   name: 'MainComp',
+  components: {
+    BurgerMenu
+  }
 }
 </script>
 
 <style scoped>
 @import url('../global_stylesheet.css');
+
+.mobile__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  opacity: 0;
+  pointer-events: none;
+}
 
 .main__container {
   padding-top: 20px;
@@ -218,12 +263,11 @@ export default {
   left: 50%;
   width: 100vw;
   height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  z-index: 0;
 }
 
 .nav__buttons {
@@ -290,13 +334,13 @@ export default {
 /* Планшеты (ширина до 1024px) */
 @media (max-width: 1024px) {
   .header {
-    height: 50px; /* Уменьшаем высоту хедера */
-    padding: 0 10px; /* Уменьшаем внутренние отступы */
-    gap: 20px; /* Уменьшаем расстояние между элементами */
+    height: 50px;
+    padding: 0 10px;
+    gap: 20px;
   }
 
   .logo svg {
-    width: 100px; /* Уменьшаем логотип */
+    width: 100px;
     height: 18px;
   }
 
@@ -360,6 +404,13 @@ export default {
 }
 
 @media screen and (max-width: 1100px) {
+  .mobile__header {
+    pointer-events: all;
+    opacity: 1;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
   .header {
     display: none;
   }
@@ -462,4 +513,36 @@ export default {
     padding: 4px 8px;
   }
 }
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+
+@media screen and (max-width: 767px) {
+  .header__text h3 {
+    font-size: 1.2rem;
+  }
+
+  .content__button h4, .credentials h4 {
+    font-size: 0.75rem;
+  }
+  
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+@media only screen and (max-width: 360px) {
+  
+}
+
 </style>
