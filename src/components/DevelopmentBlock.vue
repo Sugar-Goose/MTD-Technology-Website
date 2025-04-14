@@ -365,5 +365,10 @@
   .skills__carousel {
     width: 100%;
   }
+
+  .main__container {
+    height: fit-content;
+    gap: 30px;
+  }
 }
 </style>

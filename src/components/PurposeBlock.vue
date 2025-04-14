@@ -148,5 +148,9 @@ export default {
     .header__container h2 {
         font-size: 3rem;
     }
+
+    .main__container {
+        height: fit-content;
+    }
 }
 </style>

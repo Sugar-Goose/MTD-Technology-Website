@@ -301,30 +301,31 @@ export default {
 
 @media screen and (max-width: 592px) {
     .header__card h3 {
-        font-size: 1.75rem;
+        font-size: 1.35rem;
     }
 
     .header__text h6 {
-        font-size: 1.5rem;
-    }
-
-    .content__text h4 {
-        font-size: 1.75rem;
-    }
-
-    .content__text h5 {
         font-size: 1.25rem;
     }
 
+    .content__text h4 {
+        font-size: 1.5rem;
+    }
+
+    .content__text h5 {
+        font-size: 1rem;
+    }
+
     .skill p {
-        font-size: 0.75rem;
+        font-size: 0.5rem;
     }
 
     .skill {
-        padding: 16px 10px;
+        padding: 10px 7px;
     }
 
     .main__container {
+        height: fit-content;
         gap: 20px;
         padding: 0px;
     }

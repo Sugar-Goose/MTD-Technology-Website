@@ -264,6 +264,10 @@ export default {
     .position__text h4 {
         font-size: 1.25rem;
     }
+    
+    .main__container {
+        height: fit-content;
+    }
 }
 
 </style>

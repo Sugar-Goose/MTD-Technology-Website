@@ -332,5 +332,9 @@ p {
     .main__container {
         height: fit-content;
     }
+
+    .card__row__container .card {
+        width: 70%;
+    }
 }
 </style>
