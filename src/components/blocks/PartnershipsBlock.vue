@@ -131,7 +131,7 @@
             </div>
         </div>
         <div class="background__sphere">
-            <img src="../assets/Partnerships_sphere.png">
+            <img src="../../assets/Partnerships_sphere.png">
         </div>
     </div>
 </template>
@@ -143,7 +143,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .card__row__container {
     display: flex;

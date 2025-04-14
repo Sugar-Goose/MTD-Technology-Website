@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .marquee__container {
   width: 100vw;

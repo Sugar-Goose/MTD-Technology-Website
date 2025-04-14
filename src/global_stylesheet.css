@@ -111,18 +111,6 @@ p {
     padding: 0;
 }
 
-.accent_button {
-    color: var(--main-color);
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "San Francisco";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%; /* 21.6px */
-    text-transform: capitalize;
-}
-
 .button {
     color: var(--main-color);
     leading-trim: both;
@@ -156,6 +144,20 @@ a {
     width: fit-content;
     font-size: 26px;
     font-family: "sf_monomedium";
+}
+
+@media screen and (max-width: 950px) {
+    .accent__button {
+        padding: 13px 16px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .accent__button {
+        padding: 10px 11px;
+        font-size: 14px;
+    }
 }
 
 .accent__button::after {

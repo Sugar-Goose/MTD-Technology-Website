@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import MainComp from './components/MainComp.vue'
-import ServicesBlock from './components/ServicesBlock.vue'
-import PartnershipsBlock from './components/PartnershipsBlock.vue'
-import PositionsBlock from './components/PositionsBlock.vue'
-import PurposeBlock from './components/PurposeBlock.vue'
-import DevelopmentBlock from './components/DevelopmentBlock.vue'
-import FooterBlock from './components/FooterBlock.vue'
+import MainComp from './components/blocks/MainComp.vue'
+import ServicesBlock from './components/blocks/ServicesBlock.vue'
+import PartnershipsBlock from './components/blocks/PartnershipsBlock.vue'
+import PositionsBlock from './components/blocks/PositionsBlock.vue'
+import PurposeBlock from './components/blocks/PurposeBlock.vue'
+import DevelopmentBlock from './components/blocks/DevelopmentBlock.vue'
+import FooterBlock from './components/blocks/FooterBlock.vue'
 
 export default {
   name: 'App',

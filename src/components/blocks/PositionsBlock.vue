@@ -2,7 +2,7 @@
     <div class="main__container">
         <div class="content">
             <div class="header">
-                <img src="../assets/Positions_header.png" alt="">
+                <img src="../../assets/Positions_header.png" alt="">
             </div>
             <div class="text__container">
                 <div class="position">
@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import SplineModel from './SplineModel.vue';
+import SplineModel from '../3d_items/SplineModel.vue';
 export default {
     name: 'PositionsBlock',
     components: {
@@ -142,9 +142,8 @@ export default {
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 .object__3d {
-    display: none;
     position: absolute;
     bottom: 0;
     z-index: 10;

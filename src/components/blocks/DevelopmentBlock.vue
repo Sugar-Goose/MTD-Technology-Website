@@ -19,17 +19,20 @@
         </div>
       </div>
   
-      <div class="button__container">
-        <a href="#" class="accent__button">Start a Project ></a>
-      </div>
+      <AccentButton/>
 
       <div class="bottom__fade"></div>
     </div>
   </template>
   
   <script>
+import AccentButton from '../Items/AccentButton.vue';
+
   export default {
     name: 'DevelopmentBlock',
+    components: {
+      AccentButton
+    },
     data() {
       return {
         rows: [
@@ -237,7 +240,7 @@
   </script>
   
   <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .accent__button {
   cursor: pointer;
@@ -258,15 +261,16 @@
 }
 
 .main__container {
-    position: relative;
+  position: relative;
   display: flex;
+  gap: 25px;
   width: 100vw;
   height: 100vh;
   padding: 50px 0px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: url('../assets/Development_block_bg.png');
+  background: url('../../assets/Development_block_bg.png');
   background-size: cover;
   background-position: 50% 50%;
   color: #FFF;

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import CubesModel from './CubesModel.vue';
+import CubesModel from '../3d_items/CubesModel.vue';
 export default {
     name: 'PurposeBlock',
     components: {
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .highlighted__text {
     color: var(--accent-color);

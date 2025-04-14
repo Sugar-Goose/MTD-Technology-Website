@@ -50,7 +50,7 @@
             <div class="content__text">
                 <h4>OUR EXPERTISE</h4>
                 <h5>We are a specialized digital<br>marketing agency on a mission to<br>elevate your business and help you<br>take the next big step toward<br>success.</h5>
-                <a class="accent__button" href="#">Start a Project ></a>
+                <AccentButton/>
             </div>
             <div class="content__block">
                 <div class="skill__grid__left skills__grid">
@@ -82,17 +82,19 @@
 </template>
 
 <script>
-import RunningLine from './RunningLine.vue'
+import AccentButton from '../Items/AccentButton.vue';
+import RunningLine from '../Items/RunningLine.vue'
 export default {
     name: 'ServicesBlock',
     components: {
-        RunningLine
+        RunningLine,
+        AccentButton
     }
 }
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .content {
     display: flex;
@@ -107,7 +109,7 @@ export default {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: url('../assets/Logo_colorful.png');
+    background: url('../../assets/Logo_colorful.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;

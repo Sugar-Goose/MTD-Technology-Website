@@ -11,7 +11,7 @@
             <div class="accent__text">
                 <h5>Ești pregătit pentru viitor. Noi îl construim.</h5>
             </div>
-            <a href="#" class="accent__button">Start a Project ></a>
+            <AccentButton/>
         </div>
         <div class="column">
             <div class="title">
@@ -100,13 +100,17 @@
 </template>
 
 <script>
+import AccentButton from '../Items/AccentButton.vue';
 export default {
     name: 'FooterBlock',
+    components: {
+        AccentButton
+    }
 }
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .light__bulb svg {
     width: 100%;

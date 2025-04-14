@@ -30,7 +30,7 @@
       </div>
     </div>
     <video id="background-video" autoplay muted loop playsinline>
-        <source src="../assets/bg_video.mp4" type="video/mp4">
+        <source src="../../assets/bg_video.mp4" type="video/mp4">
         Your browser is not supporting video
     </video>
     <div class="header">
@@ -82,16 +82,16 @@
         </div>
         <div class="pill">
           <a href="#">
-            <div class="pill__container">
-              <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <circle id="Flag" cx="13.5" cy="14" r="13.5" fill="url(#pattern0_10_22)"/>
-                <defs>
-                <pattern id="pattern0_10_22" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use xlink:href="#image0_10_22" transform="matrix(0.00244603 0 0 0.00314156 -0.105629 -0.0159462)"/>
-                </pattern>
-                <image id="image0_10_22" data-name="Flag_of_Romania.svg.png" width="500" height="334" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAFOBAMAAACCqfKqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEUAKn5FVmCXjj+pZTWxVDMAK39UY1z80RbdUCDOESb///8a1sQzAAAABXRSTlNVaI6ntArr8tcAAAABYktHRApo0PRWAAAAB3RJTUUH6AYXEw8mP7gt0gAAAXNJREFUeNrtz1EBgCAUBLCXgQhQhQpmIIJWoS0lji+3Bqsnb71x384rdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV19b/XL2g9bsy8A0ioQLpS/nXAAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA2LTIzVDE5OjE1OjM3KzAwOjAwRgAcowAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNi0yM1QxOToxNTozNyswMDowMDddpB8AAAAASUVORK5CYII="/>
-                </defs>
-              </svg>
+            <div class="pill__container language__button" @click="ChangeLanguage">
+              <svg
+                width="27"
+                height="28"
+                viewBox="0 0 27 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                v-html="currentSvg"
+              ></svg>
             </div>
           </a>
         </div>
@@ -118,17 +118,81 @@
 </template>
 
 <script>
-import BurgerMenu from './BurgerMenu.vue';
+import BurgerMenu from '../Items/BurgerMenu.vue';
 export default {
   name: 'MainComp',
   components: {
     BurgerMenu
+  },
+  data() {
+    return {
+      currentSvg: `
+          <g clip-path="url(#clip0_248_42)">
+          <path d="M13.5 27.5C20.9558 27.5 27 21.4558 27 14C27 6.54416 20.9558 0.5 13.5 0.5C6.04416 0.5 0 6.54416 0 14C0 21.4558 6.04416 27.5 13.5 27.5Z" fill="#F0F0F0"/>
+          <path d="M2.79048 5.78101C1.73005 7.1607 0.930436 8.7509 0.464844 10.4784H7.4879L2.79048 5.78101Z" fill="#0052B4"/>
+          <path d="M26.5347 10.4784C26.0691 8.7509 25.2694 7.1607 24.209 5.78101L19.5117 10.4784H26.5347Z" fill="#0052B4"/>
+          <path d="M0.464844 17.5219C0.930488 19.2493 1.7301 20.8395 2.79048 22.2192L7.48774 17.5219H0.464844Z" fill="#0052B4"/>
+          <path d="M21.7189 3.29078C20.3392 2.23034 18.749 1.43073 17.0215 0.965088V7.98809L21.7189 3.29078Z" fill="#0052B4"/>
+          <path d="M5.28027 24.7092C6.65996 25.7697 8.25017 26.5693 9.97764 27.0349V20.012L5.28027 24.7092Z" fill="#0052B4"/>
+          <path d="M9.97759 0.965088C8.25012 1.43073 6.65991 2.23034 5.28027 3.29073L9.97759 7.98804V0.965088Z" fill="#0052B4"/>
+          <path d="M17.0215 27.0349C18.749 26.5693 20.3392 25.7697 21.7188 24.7093L17.0215 20.012V27.0349Z" fill="#0052B4"/>
+          <path d="M19.5117 17.5219L24.209 22.2192C25.2694 20.8396 26.0691 19.2493 26.5347 17.5219H19.5117Z" fill="#0052B4"/>
+          <path d="M26.8857 12.2391H15.261H15.2609V0.614275C14.6845 0.539234 14.0968 0.5 13.5 0.5C12.9031 0.5 12.3155 0.539234 11.7391 0.614275V12.239V12.2391H0.114275C0.0392344 12.8155 0 13.4032 0 14C0 14.5969 0.0392344 15.1845 0.114275 15.7609H11.739H11.7391V27.3857C12.3155 27.4608 12.9031 27.5 13.5 27.5C14.0968 27.5 14.6845 27.4608 15.2609 27.3857V15.761V15.7609H26.8857C26.9608 15.1845 27 14.5969 27 14C27 13.4032 26.9608 12.8155 26.8857 12.2391Z" fill="#D80027"/>
+          <path d="M17.0215 17.5218L23.0456 23.5459C23.3227 23.269 23.587 22.9794 23.8392 22.6793L18.6817 17.5217H17.0215V17.5218Z" fill="#D80027"/>
+          <path d="M9.97832 17.5219H9.97821L3.9541 23.546C4.23106 23.823 4.52063 24.0873 4.82079 24.3395L9.97832 19.1819V17.5219Z" fill="#D80027"/>
+          <path d="M9.97787 10.4783V10.4782L3.9537 4.45398C3.67664 4.73094 3.41233 5.0205 3.16016 5.32067L8.31774 10.4782L9.97787 10.4783Z" fill="#D80027"/>
+          <path d="M17.0215 10.4783L23.0457 4.45402C22.7687 4.17695 22.4792 3.91265 22.179 3.66052L17.0215 8.8181V10.4783Z" fill="#D80027"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_248_42">
+          <rect width="27" height="27" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+      `,
+      svgs: [
+        `<g clip-path="url(#clip0_248_42)">
+          <path d="M13.5 27.5C20.9558 27.5 27 21.4558 27 14C27 6.54416 20.9558 0.5 13.5 0.5C6.04416 0.5 0 6.54416 0 14C0 21.4558 6.04416 27.5 13.5 27.5Z" fill="#F0F0F0"/>
+          <path d="M2.79048 5.78101C1.73005 7.1607 0.930436 8.7509 0.464844 10.4784H7.4879L2.79048 5.78101Z" fill="#0052B4"/>
+          <path d="M26.5347 10.4784C26.0691 8.7509 25.2694 7.1607 24.209 5.78101L19.5117 10.4784H26.5347Z" fill="#0052B4"/>
+          <path d="M0.464844 17.5219C0.930488 19.2493 1.7301 20.8395 2.79048 22.2192L7.48774 17.5219H0.464844Z" fill="#0052B4"/>
+          <path d="M21.7189 3.29078C20.3392 2.23034 18.749 1.43073 17.0215 0.965088V7.98809L21.7189 3.29078Z" fill="#0052B4"/>
+          <path d="M5.28027 24.7092C6.65996 25.7697 8.25017 26.5693 9.97764 27.0349V20.012L5.28027 24.7092Z" fill="#0052B4"/>
+          <path d="M9.97759 0.965088C8.25012 1.43073 6.65991 2.23034 5.28027 3.29073L9.97759 7.98804V0.965088Z" fill="#0052B4"/>
+          <path d="M17.0215 27.0349C18.749 26.5693 20.3392 25.7697 21.7188 24.7093L17.0215 20.012V27.0349Z" fill="#0052B4"/>
+          <path d="M19.5117 17.5219L24.209 22.2192C25.2694 20.8396 26.0691 19.2493 26.5347 17.5219H19.5117Z" fill="#0052B4"/>
+          <path d="M26.8857 12.2391H15.261H15.2609V0.614275C14.6845 0.539234 14.0968 0.5 13.5 0.5C12.9031 0.5 12.3155 0.539234 11.7391 0.614275V12.239V12.2391H0.114275C0.0392344 12.8155 0 13.4032 0 14C0 14.5969 0.0392344 15.1845 0.114275 15.7609H11.739H11.7391V27.3857C12.3155 27.4608 12.9031 27.5 13.5 27.5C14.0968 27.5 14.6845 27.4608 15.2609 27.3857V15.761V15.7609H26.8857C26.9608 15.1845 27 14.5969 27 14C27 13.4032 26.9608 12.8155 26.8857 12.2391Z" fill="#D80027"/>
+          <path d="M17.0215 17.5218L23.0456 23.5459C23.3227 23.269 23.587 22.9794 23.8392 22.6793L18.6817 17.5217H17.0215V17.5218Z" fill="#D80027"/>
+          <path d="M9.97832 17.5219H9.97821L3.9541 23.546C4.23106 23.823 4.52063 24.0873 4.82079 24.3395L9.97832 19.1819V17.5219Z" fill="#D80027"/>
+          <path d="M9.97787 10.4783V10.4782L3.9537 4.45398C3.67664 4.73094 3.41233 5.0205 3.16016 5.32067L8.31774 10.4782L9.97787 10.4783Z" fill="#D80027"/>
+          <path d="M17.0215 10.4783L23.0457 4.45402C22.7687 4.17695 22.4792 3.91265 22.179 3.66052L17.0215 8.8181V10.4783Z" fill="#D80027"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_248_42">
+          <rect width="27" height="27" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>`,
+        `
+            <circle id="Flag" cx="13.5" cy="14" r="13.5" fill="url(#pattern0_10_22)"/>
+            <defs>
+            <pattern id="pattern0_10_22" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_10_22" transform="matrix(0.00244603 0 0 0.00314156 -0.105629 -0.0159462)"/>
+            </pattern>
+            <image id="image0_10_22" data-name="Flag_of_Romania.svg.png" width="500" height="334" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAFOBAMAAACCqfKqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEUAKn5FVmCXjj+pZTWxVDMAK39UY1z80RbdUCDOESb///8a1sQzAAAABXRSTlNVaI6ntArr8tcAAAABYktHRApo0PRWAAAAB3RJTUUH6AYXEw8mP7gt0gAAAXNJREFUeNrtz1EBgCAUBLCXgQhQhQpmIIJWoS0lji+3Bqsnb71x384rdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV19b/XL2g9bsy8A0ioQLpS/nXAAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA2LTIzVDE5OjE1OjM3KzAwOjAwRgAcowAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNi0yM1QxOToxNTozNyswMDowMDddpB8AAAAASUVORK5CYII="/>
+            </defs>
+        `
+      ]
+    };
+  },
+  methods: {
+    ChangeLanguage() {
+      this.currentSvg = this.currentSvg === this.svgs[0] ? this.svgs[1] : this.svgs[0];
+    }
   }
 }
 </script>
 
 <style scoped>
-@import url('../global_stylesheet.css');
+@import url('../../global_stylesheet.css');
 
 .mobile__header {
   display: flex;
